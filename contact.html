@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Charanjit Singh</title>
+<meta name="description" content="Get in touch with Charanjit Singh — Software Developer in Test based in Brampton, Ontario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="caret">&gt;</span> charanjit.singh<span class="cursor"></span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">menu</button>
+    <nav class="main">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="about.html" data-page="about.html">About Me</a>
+      <a href="certifications.html" data-page="certifications.html">Certifications</a>
+      <a href="blog.html" data-page="blog.html">Blog</a>
+      <a href="contact.html" data-page="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1 style="margin-top:10px;">Let's talk testing.</h1>
+      <p style="max-width:56ch;">Open to SDET / QA automation roles, framework consulting, or just talking shop about test strategy. Reach out directly or send a note below.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px;">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Direct</span>
+        <ul class="contact-list" style="margin-top:16px;">
+          <li><span class="k">Email</span><a class="v" href="mailto:devgun.charanjit@gmail.com">devgun.charanjit@gmail.com</a></li>
+          <li><span class="k">Phone</span><span class="v">647 871 9085</span></li>
+          <li><span class="k">Location</span><span class="v">Brampton, Ontario, Canada</span></li>
+          <li><span class="k">Website</span><a class="v" href="http://www.charanjitsingh.ca" target="_blank" rel="noopener">charanjitsingh.ca</a></li>
+          <li><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/charanjit-singh-sdet/" target="_blank" rel="noopener">/in/charanjit-singh-sdet</a></li>
+          <li><span class="k">GitHub</span><a class="v" href="https://github.com/Charanjit55588" target="_blank" rel="noopener">Charanjit55588</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="eyebrow">Send a note</span>
+        <form style="margin-top:16px;" onsubmit="event.preventDefault(); this.querySelector('.form-status').style.display='block';">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status mono" style="display:none; color:var(--accent); margin-top:12px; font-size:13px;">// This form is a static template — wire it up to Formspree, Netlify Forms, or an email API to go live. For now, email devgun.charanjit@gmail.com directly.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="tagline">Software testing, automation and shipping stable builds — one suite at a time.</span>
+    <div class="social">
+      <a href="https://github.com/Charanjit55588" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/charanjit-singh-sdet/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:devgun.charanjit@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:16px;">
+    <span class="tagline">© 2026 Charanjit Singh · charanjitsingh.ca</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

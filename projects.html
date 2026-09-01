@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Charanjit Singh</title>
+<meta name="description" content="Automation frameworks, API testing systems and QA achievements built by Charanjit Singh across TELUS International, Compass Digital Labs, Walmart Labs and Newtopia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="caret">&gt;</span> charanjit.singh<span class="cursor"></span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">menu</button>
+    <nav class="main">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="about.html" data-page="about.html">About Me</a>
+      <a href="certifications.html" data-page="certifications.html">Certifications</a>
+      <a href="blog.html" data-page="blog.html">Blog</a>
+      <a href="contact.html" data-page="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Projects</span>
+      <h1 style="margin-top:10px;">Frameworks, pipelines &amp; test systems</h1>
+      <p style="max-width:60ch;">A run-through of the automation architectures and QA processes I've designed and shipped across mobile, web and API surfaces.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px;">
+    <div class="wrap">
+      <div class="grid-2">
+
+        <div class="card">
+          <span class="badge running">In production</span>
+          <h3>Cross-Platform Mobile Automation Framework</h3>
+          <p><strong>TELUS International</strong> — Jan 2022 – present</p>
+          <p>Built and maintain automated test scripts inside the Carina framework (Java), translating requirement docs into actionable Sanity, Smoke and Regression suites. Scripts run across Android, iOS, Smart TV, Chromecast, Nvidia Shield and BYOD, executed on BrowserStack through Harness in CI/CD. Bug reports capture reproducible steps, video and Charles logs so developers can root-cause fast.</p>
+          <div class="tags"><span>Carina</span><span>Java</span><span>Appium</span><span>Harness</span><span>BrowserStack</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>BDD Automation Framework for Food-Service Mobile App</h3>
+          <p><strong>Compass Digital Labs</strong> — Apr – Dec 2021</p>
+          <p>Designed a Java + Cucumber JUnit framework following Behavior Driven Development, integrated to run on Sauce Labs. Used Charles to reverse-engineer mobile-consumed APIs and built the resulting Postman collection, plus webhooks that trigger order placement and status changes inside test scripts. Introduced BDD to the team and removed local run dependencies entirely.</p>
+          <div class="tags"><span>Cucumber JUnit</span><span>Postman</span><span>Charles</span><span>Sauce Labs</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>Scheduled API Regression &amp; Monitoring</h3>
+          <p><strong>Multiple roles</strong></p>
+          <p>Designed API automation to run hourly across staging and production environments in Runscope and Postman, with Newman configuring cross-environment runs to check functional and reliability behaviour. Webhooks called endpoint sets directly from test scripts, and results fed into daily/weekly automated test reports.</p>
+          <div class="tags"><span>Postman</span><span>Newman</span><span>Runscope</span><span>Webhooks</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>Walmart Grocery Check-in Feature</h3>
+          <p><strong>Walmart Labs</strong> — Apr 2020 – Apr 2021</p>
+          <p>Scripted native and webview automation in JavaScript using WebdriverIO and CucumberJS. Covered deep-linking across email templates, flyers, push notifications and phone browsers, plus automated/human Captcha testing to stop bot attacks. Delivered stable, bug-free builds to production on a bi-weekly release cadence — including a successful rollout of the Grocery Check-in feature.</p>
+          <div class="tags"><span>WebdriverIO</span><span>CucumberJS</span><span>Urban Airship</span><span>Splunk</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>Salesforce Sandbox QA &amp; TestRail↔Jira Integration</h3>
+          <p><strong>Newtopia</strong> — Nov 2017 – Apr 2020</p>
+          <p>Ran functional and integration testing inside a Salesforce sandbox — objects, workflows, validation rules, triggers and data sync — without touching production. Integrated TestRail directly with Jira so defects push through without leaving the app, cutting defect-creation time by roughly 90%. Built Jira dashboards to visualize automation coverage in real time.</p>
+          <div class="tags"><span>Salesforce</span><span>TestRail</span><span>JIRA</span><span>Appium</span></div>
+        </div>
+
+        <div class="card">
+          <span class="badge blue">Ongoing practice</span>
+          <h3>Device &amp; Wearable Sync Testing</h3>
+          <p><strong>Newtopia</strong> — Sep 2015 – Oct 2017</p>
+          <p>Tested sync accuracy for Health, Fitbit, Jawbone, Body Trace and Garmin across iOS and Android, and worked closely with developers validating third-party integrations (Validic, Fitbit) at the endpoint level. Increased accessibility test coverage by 35% against WCAG 2.0 criteria.</p>
+          <div class="tags"><span>Appium</span><span>WCAG 2.0</span><span>Xcode</span><span>TestFlight</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="text-align:center;">
+    <div class="wrap">
+      <span class="eyebrow" style="justify-content:center;">Want the deep-dive?</span>
+      <h2 style="margin-top:10px;">Happy to walk through any of these frameworks live.</h2>
+      <div class="btn-row" style="justify-content:center; margin-top:20px;">
+        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+        <a href="https://github.com/Charanjit55588" target="_blank" rel="noopener" class="btn">View GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="tagline">Software testing, automation and shipping stable builds — one suite at a time.</span>
+    <div class="social">
+      <a href="https://github.com/Charanjit55588" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/charanjit-singh-sdet/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:devgun.charanjit@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:16px;">
+    <span class="tagline">© 2026 Charanjit Singh · charanjitsingh.ca</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

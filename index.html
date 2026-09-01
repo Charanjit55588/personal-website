@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charanjit Singh — SDET & Senior QA Automation Engineer</title>
+<meta name="description" content="Charanjit Singh — Software Developer in Test based in Toronto/Brampton, ON. 10+ years building mobile, web and API test automation for fintech, retail and healthtech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="caret">&gt;</span> charanjit.singh<span class="cursor"></span></a>
+    <button class="nav-toggle" aria-label="Toggle menu">menu</button>
+    <nav class="main">
+      <a href="index.html" data-page="index.html">Home</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="about.html" data-page="about.html">About Me</a>
+      <a href="certifications.html" data-page="certifications.html">Certifications</a>
+      <a href="blog.html" data-page="blog.html">Blog</a>
+      <a href="contact.html" data-page="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">SDET · Test Automation · Toronto, ON</span>
+        <h1>Quality is a <span style="color:var(--accent)">pipeline</span>,<br>not a checkpoint.</h1>
+        <p class="lede">I'm Charanjit — a Software Developer in Test with 10+ years building mobile, web and API automation frameworks for fintech-adjacent, retail and healthtech products. I turn "it works on my machine" into a green build on every platform.</p>
+        <div class="btn-row">
+          <a href="projects.html" class="btn btn-primary">See my work</a>
+          <a href="contact.html" class="btn">Get in touch</a>
+        </div>
+        <div class="location">📍 Brampton, ON · currently @ TELUS International</div>
+      </div>
+      <div class="terminal">
+        <div class="bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="title">run — regression_suite.sh</span>
+        </div>
+        <div class="body terminal-lines" data-script='[
+          {"prompt":"$","text":"carina run --suite regression --platform all","cls":"dim","speed":16,"pause":300},
+          {"text":"Targeting: Android · iOS · SmartTV · Chromecast · BYOD","cls":"dim","speed":10,"pause":220},
+          {"text":"[1/6] Smoke suite ......................... PASS","cls":"pass","speed":10,"pause":180},
+          {"text":"[2/6] API contract tests (Postman/Newman) .. PASS","cls":"pass","speed":10,"pause":180},
+          {"text":"[3/6] Deeplink + push notification tests ... PASS","cls":"pass","speed":10,"pause":180},
+          {"text":"[4/6] Regression — Android/iOS ............. RUNNING","cls":"amber","speed":10,"pause":220},
+          {"text":"[5/6] Cross-device (BrowserStack) .......... QUEUED","cls":"dim","speed":10,"pause":220},
+          {"prompt":"$","text":"10+ yrs experience · 7 companies · 0 regressions shipped to blame","cls":"dim","speed":8,"pause":0}
+        ]'></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stack-strip">
+    <div class="wrap stack-track">
+      <span class="chip">Appium</span>
+      <span class="chip">Selenium WebDriver</span>
+      <span class="chip">Java</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Cucumber / BDD</span>
+      <span class="chip">Postman &amp; Newman</span>
+      <span class="chip">Carina Framework</span>
+      <span class="chip">TestNG</span>
+      <span class="chip">JIRA / Xray / Zephyr</span>
+      <span class="chip">Jenkins / Harness</span>
+      <span class="chip">BrowserStack / Sauce Labs</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="stat-row">
+        <div class="stat"><div class="num">10+</div><div class="label">Years in QA & Automation</div></div>
+        <div class="stat"><div class="num">7</div><div class="label">Companies &amp; Products</div></div>
+        <div class="stat"><div class="num">6</div><div class="label">Platforms Automated</div></div>
+        <div class="stat"><div class="num">90%</div><div class="label">Faster Defect Logging (TestRail↔Jira)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="wrap">
+      <a href="certifications.html" class="learning-banner">
+        <span class="badge blue">Always learning</span>
+        <p>Actively certifying in agentic AI &amp; Model Context Protocol tooling — alongside the core QA/automation fundamentals. <span class="link">See certifications →</span></p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Selected work</span>
+        <h2>Frameworks &amp; systems I've shipped</h2>
+        <p>Real automation work from across fintech-adjacent, retail and healthtech mobile products.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge running">In production</span>
+          <h3>Cross-Platform Mobile Automation — Carina + Java</h3>
+          <p>Test scripts running across Android, iOS, Smart TV, Chromecast, Nvidia Shield &amp; BYOD, executed via Harness on BrowserStack.</p>
+          <div class="tags"><span>Carina</span><span>Java</span><span>Harness</span></div>
+        </div>
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>BDD Automation Framework — Sauce Labs</h3>
+          <p>Cucumber JUnit framework with Gherkin-documented scenarios, Postman collections reverse-engineered via Charles.</p>
+          <div class="tags"><span>Cucumber</span><span>Postman</span><span>Sauce Labs</span></div>
+        </div>
+        <div class="card">
+          <span class="badge pass">Shipped</span>
+          <h3>Walmart Grocery Check-in Rollout</h3>
+          <p>WebdriverIO + CucumberJS suite covering deep-linking, push notifications and bi-weekly release regression.</p>
+          <div class="tags"><span>WebdriverIO</span><span>CucumberJS</span><span>Deeplinking</span></div>
+        </div>
+      </div>
+      <div style="margin-top:32px;"><a href="projects.html" class="btn">View all projects →</a></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap" style="text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">Let's connect</span>
+      <h2 style="margin-top:10px;">Have a role, a flaky suite, or a framework to talk through?</h2>
+      <div class="btn-row" style="justify-content:center; margin-top:20px;">
+        <a href="contact.html" class="btn btn-primary">Contact me</a>
+        <a href="https://www.linkedin.com/in/charanjit-singh-sdet/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+        <a href="https://github.com/Charanjit55588" target="_blank" rel="noopener" class="btn">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="tagline">Software testing, automation and shipping stable builds — one suite at a time.</span>
+    <div class="social">
+      <a href="https://github.com/Charanjit55588" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/charanjit-singh-sdet/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:devgun.charanjit@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:16px;">
+    <span class="tagline">© 2026 Charanjit Singh · charanjitsingh.ca</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
