@@ -1,0 +1,51 @@
+{
+  "username": "Charanjit55588",
+  "settings": {
+    "excludeForks": true,
+    "excludeArchived": true,
+    "activeDays": 60,
+    "starHighlight": 5,
+    "featuredTopics": ["featured", "portfolio"]
+  },
+  "pinned": ["coffee-shop-app", "claude-skills"],
+  "featured": ["coffee-shop-app"],
+  "hidden": [
+    "personal-website",
+    "Charanjit55588",
+    "api",
+    "api-newman",
+    "appium-1",
+    "codejava",
+    "demoTvapp",
+    "designpatterns",
+    "example-maven-circleci",
+    "html-css-Inspiration",
+    "myprofile",
+    "nativeandroid",
+    "profile",
+    "resume",
+    "skills-communicate-using-markdown",
+    "skills-introduction-to-github",
+    "DemoIOSProject",
+    "automationdemo",
+    "demoMobileAutomation",
+    "greatReadMeTemplate",
+    "iosautomation",
+    "demoProject",
+    "mobileautomation",
+    "SampleMaven",
+    "test1"
+  ],
+  "custom": {
+    "coffee-shop-app": {
+      "title": "Bean & Brew — Demo App for Test Automation",
+      "description": "A small coffee shop web app (React + Vite) with an in-memory Express mock backend, built as a realistic, stable target for UI and API automation. Covers the full journey from login through product, cart and checkout, plus favorites and profile settings. The README walkthrough GIF is recorded automatically with Playwright.",
+      "tags": ["React", "Vite", "Express", "Playwright", "API testing"]
+    },
+    "claude-skills": {
+      "title": "Claude Skills",
+      "description": "Reusable Claude skills for QA workflows, each packaged as a SKILL.md plus templates. First up is log-defect, which writes structured defect reports from a standard template and enforces mandatory fields. Works in Claude Code and Claude.ai, and the Markdown templates drop straight into Jira, GitHub Issues or Azure DevOps.",
+      "tags": ["Claude", "Agent Skills", "QA", "Defect reporting"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "username": "Charanjit55588",
+  "repos": [
+    {
+      "name": "coffee-shop-app",
+      "description": "Bean & Brew: a small coffee shop web app with a mock backend, built as a target for UI and API test automation.",
+      "url": "https://github.com/Charanjit55588/coffee-shop-app",
+      "homepage": "",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 0,
+      "created": "2026-10-27T03:45:21Z",
+      "pushed": "2026-10-27T03:55:38Z",
+      "featured": true,
+      "active": true,
+      "highlight": true
+    },
+    {
+      "name": "claude-skills",
+      "description": "Reusable Claude skills",
+      "url": "https://github.com/Charanjit55588/claude-skills",
+      "homepage": "",
+      "language": "",
+      "topics": [],
+      "stars": 0,
+      "created": "2026-10-14T18:18:44Z",
+      "pushed": "2026-10-14T18:20:03Z",
+      "featured": false,
+      "active": true,
+      "highlight": true
+    }
+  ]
+}
