@@ -1,0 +1,84 @@
+name: Sync GitHub projects
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: show the changes without opening a PR"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "0 6 * * 0" # Sundays 06:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-projects
+  cancel-in-progress: false
+
+env:
+  SYNC_BRANCH: auto/sync-projects
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run sync script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: |
+          node scripts/sync-projects.mjs $DRY_RUN --summary "$RUNNER_TEMP/summary.md"
+          cat "$RUNNER_TEMP/summary.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes. Nothing to commit." | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat
+          fi
+
+      - name: Validate output
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/projects.json','utf8'))"
+          # Only these two files may ever change.
+          unexpected=$(git diff --name-only | grep -v -x -e projects.html -e data/projects.json || true)
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected files changed: $unexpected"; exit 1
+          fi
+          test "$(grep -c 'AUTO-PROJECTS:START' projects.html)" = 1
+          test "$(grep -c 'AUTO-PROJECTS:END' projects.html)" = 1
+
+      - name: Commit and open or update PR
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$SYNC_BRANCH"
+          git add projects.html data/projects.json
+          git commit -m "chore: sync GitHub projects"
+          git push --force origin "$SYNC_BRANCH"
+
+          pr=$(gh pr list --head "$SYNC_BRANCH" --state open --json number --jq '.[0].number')
+          if [ -n "$pr" ]; then
+            gh pr edit "$pr" --body-file "$RUNNER_TEMP/summary.md"
+            echo "Updated PR #$pr" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh pr create --base "${{ github.event.repository.default_branch }}" --head "$SYNC_BRANCH" \
+              --title "Sync GitHub projects" --body-file "$RUNNER_TEMP/summary.md"
+          fi
